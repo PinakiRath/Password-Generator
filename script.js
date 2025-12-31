@@ -7,20 +7,23 @@ const symbol = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
 const allChars = uppercase + lowercase + number + symbol;
 
-function createPassword(){
-    let password = "";
-    password += uppercase[Math.floor(Math.random() * uppercase.length)];
-    password += lowercase[Math.floor(Math.random() * lowercase.length)];
-    password += number[Math.floor(Math.random() * number.length)];
-    password += symbol[Math.floor(Math.random() * symbol.length)];
+function createPassword() {
+  let password = "";
+  password += uppercase[Math.floor(Math.random() * uppercase.length)];
+  password += lowercase[Math.floor(Math.random() * lowercase.length)];
+  password += number[Math.floor(Math.random() * number.length)];
+  password += symbol[Math.floor(Math.random() * symbol.length)];
 
-    while(length > password.length){
+  while (length > password.length) {
     password += allChars[Math.floor(Math.random() * allChars.length)];
-    }
-    passwordBox.value = password;
+  }
+  passwordBox.value = password;
 }
 function copyPassword(){
     passwordBox.select();
     document.execCommand("copy");
-    alert("Password copied bard!");
+    alert("Password copied to clipboard!");
+}
+if(pass == null){
+  createPassword();
 }
