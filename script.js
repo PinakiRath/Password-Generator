@@ -2,7 +2,7 @@ const passwordBox = document.getElementById("Password");
 const length = 12;
 const uppercase = "ABCDEFGIJKLMNOPQRSTUVWXYZ";
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
-const number = "01234589";
+const number = "0123456789";
 const symbol = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
 const allChars = uppercase + lowercase + number + symbol;
